@@ -32,7 +32,8 @@ There are no known bugs so far
 * HTML
 * CSS
 * Typescript
-* Bootstrap 
+* Bootstrap   
+* GithubApi
 ## Support and contact details
 In case of any problem while interacting with the web application, reach out to me at annalis.kirwa@student.moringaschool.com
 ### License.
