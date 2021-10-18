@@ -6,6 +6,9 @@
   margin-left: 80px;
   font-family: 'Courier New', Courier, monospace;
 }
+.form-control{
+  font-family: 'Courier New', Courier, monospace;
+}
 .heading{
   font-family: 'Courier New', Courier, monospace;
   font-weight: 800;
