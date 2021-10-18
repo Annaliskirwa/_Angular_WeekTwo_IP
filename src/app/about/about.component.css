@@ -1,0 +1,13 @@
+.container {
+    margin-top: 10%;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  #welcome{
+  font-size: 25pt;
+  margin-bottom: 2%;
+  }
+  .copyright{
+      color: crimson;
+  
+  }

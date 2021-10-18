@@ -1,0 +1,92 @@
+<body>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<div class = "heading">
+    <div class = "head">
+        <h1>Github Search</h1>
+    </div>
+</div>
+<!--the form below enables us to search github -->
+<div class = "container1">
+<div class = "container">
+<form action="" class="search-form">
+	<div class="form-group">
+		<label for = "username" class = "labell">Enter the github username </label>
+		<input type="text" class="form-control" placeholder="Enter GitHub username to begin search" [(ngModel)]="username" name="username" (keyup)="findProfile()">
+	</div>
+</form>
+<!--end of form -->
+
+<!--this div below will only b shown if the profile exists hence we use ngif-->
+<div *ngIf="profile">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			{{profile.name}} <small>({{profile.login}})</small>
+			<span *ngIf="profile.company">, Works at {{profile.company}}</span>
+			{{profile.location}}
+		</div>
+
+    <div class="panel-body">
+			<div class="row">
+				<div class="col-sm-3">
+					<img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+				</div>
+
+<!-- bio-->
+  <div class="col-sm-5">
+					<ul class="list-group">
+						<li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+						<li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+						<li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
+						<li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
+					</ul>
+	</div>
+  <!-- end of bio-->
+
+  <div class="col-sm-4">
+					<div>
+						<p>
+							<span class="label label-default">{{profile.followers}} Followers</span>
+							<span class="label label-primary">{{profile.following}} Following </span>
+							<span class="label label-success">{{profile.public_gists}} Public gists</span>
+							<span class="label label-info">{{profile.public_repos}} Public Repos</span>
+						</p>
+
+						<p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
+
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Repos</h3>
+							</div>
+							<div class="panel-body" *ngFor="let repo of repos">
+								<p class="clearfix">
+									{{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on github</a>
+								</p>
+								<p>{{repo.description}}</p>
+							</div>
+						</div>
+            <!--end of panel default -->
+
+
+					</div>
+		      </div>
+
+
+
+<!--end of last column -->
+  </div>
+
+   </div>
+
+	</div>
+</div>
+</div>
+<div class="footer">
+    <h6>Brought to you by: Annalis Kirwa</h6>
+    <h6>Nice time <span>'GitSearching'</span>
+      <br><img src = "https://www.freepngimg.com/download/face/73751-emoticon-smiley-face-wink-mouth-smile.png" height="50px" width="50px">
+    </h6>
+  </div>
+</div>
+</body>
