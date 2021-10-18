@@ -32,6 +32,8 @@
 .footer span {
   color: crimson;
 }
-
+span label{
+  padding:10px
+}
 
 
