@@ -4,3 +4,9 @@
     margin-bottom: 0px;
     font-size: large;
 }
+.navbar-brand b{
+    color: crimson;
+}
+.navbar-nav{
+    margin-left: 100px;
+}
