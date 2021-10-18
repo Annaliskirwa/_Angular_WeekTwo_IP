@@ -22,7 +22,7 @@ export class SearchService {
   constructor(private http:Http) {
     //add a message to console to check if service is running
     console.log("service is now ready!");
-    this.username = 'mikewanya';
+    this.username = 'Annaliskirwa';
    }
 
    //fenction to get data friom github application
