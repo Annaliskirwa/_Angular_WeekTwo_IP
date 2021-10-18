@@ -1,7 +1,7 @@
 # GithubSearch  
 #### 18/10/2021
 #### By **Annalis Kirwa**
-This is a web application where users can a website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories    
+This is a web application where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories    
 ## Behaviour Driven Development(BDD)
 |Behaviour| Input| Output|
 |:--------|:-----|:------|
